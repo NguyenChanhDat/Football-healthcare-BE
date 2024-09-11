@@ -7,5 +7,5 @@ import com.ncd2504.FootballHealthCare.models.user;
 
 @Repository
 public interface UserRepository extends MongoRepository<user, String> {
-
+    user findFirstByUsername(String username);
 }
