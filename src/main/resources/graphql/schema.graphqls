@@ -1,0 +1,13 @@
+type Query {
+  getExerciseById(exerciseId: String!): Exercise
+  getAllExercises: [Exercise]
+}
+
+type Exercise {
+  id: String!
+  name: String
+  imageUrl: String
+  targetMuscle1: String
+  targetMuscle2: String
+  targetMuscle3: String
+}
