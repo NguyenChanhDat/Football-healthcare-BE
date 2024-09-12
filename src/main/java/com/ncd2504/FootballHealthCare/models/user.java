@@ -6,26 +6,26 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document("userInfor")
 public class user {
     @Id
-    private String userId;
+    private String id;
     private String username;
     private String password;
-    private String userImageUrl;
-    private Boolean userStatus;
+    private String imageUrl;
+    private Boolean status;
 
-    public user(String userId,
+    public user(String id,
             String username,
             String password,
-            String userImageUrl,
-            Boolean userStatus) {
-        this.userId = userId;
+            String imageUrl,
+            Boolean status) {
+        this.id = id;
         this.username = username;
         this.password = password;
-        this.userImageUrl = userImageUrl;
-        this.userStatus = userStatus;
+        this.imageUrl = imageUrl;
+        this.status = status;
     }
 
-    public String getUserId() {
-        return this.userId;
+    public String getId() {
+        return this.id;
     }
 
     public String getUserName() {
@@ -36,11 +36,11 @@ public class user {
         return this.password;
     }
 
-    public String getUserImageUrl() {
-        return this.userImageUrl;
+    public String getImageUrl() {
+        return this.imageUrl;
     }
 
-    public Boolean getUserStatus() {
-        return this.userStatus;
+    public Boolean getStatus() {
+        return this.status;
     }
 }
