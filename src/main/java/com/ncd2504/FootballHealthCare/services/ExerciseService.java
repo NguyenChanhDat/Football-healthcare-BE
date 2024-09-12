@@ -1,5 +1,6 @@
 package com.ncd2504.FootballHealthCare.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,10 @@ public class ExerciseService {
     }
 
     public Optional<exercise> getById(String id) {
-        return this.exerciseRepository.findById(id);
+        return exerciseRepository.findById(id);
+    }
+
+    public List<exercise> getAll(){
+        return exerciseRepository.findAll();
     }
 }
