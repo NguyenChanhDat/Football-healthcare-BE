@@ -1,4 +1,5 @@
 type Query {
+  getUserById(userId: String!): User
   getExerciseById(exerciseId: String!): Exercise
   getAllExercises: [Exercise]
 }
@@ -10,4 +11,12 @@ type Exercise {
   targetMuscle1: String
   targetMuscle2: String
   targetMuscle3: String
+}
+
+type User {
+  id: String!
+  username: String!
+  password: String!
+  imageUrl: String
+  status: Boolean!
 }
