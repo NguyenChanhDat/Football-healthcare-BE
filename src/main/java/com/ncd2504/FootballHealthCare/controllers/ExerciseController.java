@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
+import org.springframework.graphql.data.method.annotation.SchemaMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ncd2504.FootballHealthCare.models.exercise;
@@ -25,6 +26,7 @@ public class ExerciseController {
     }
 
     @QueryMapping("getExerciseById")
+    @SchemaMapping("")
     public Optional<exercise> getById(@Argument("exerciseId") String exerciseId) {
         return exerciseService.getById(exerciseId);
     }
