@@ -20,3 +20,11 @@ type User {
   imageUrl: String
   status: Boolean!
 }
+
+type Set {
+  id: String!
+  exerciseName: String!
+  weight: Float!
+  reps: Int!
+  restTime: Int!
+}
